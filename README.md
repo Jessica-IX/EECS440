@@ -1,1 +1,1 @@
-# EECS440 Portfolio Website
+# Portfolio Website
