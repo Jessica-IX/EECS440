@@ -96,12 +96,14 @@ window.portfolioProjects = {
 
 window.portfolioCards = [
 	{
-		id: "csesim",
-		style: "style1",
-		image: "images/pic01.jpg",
-		title: "CSE Simulato(VR)",
-		tag: "VR",
-		tech: ["Unreal Engine 5", "Blueprints", "VR"]
+		id: "littlewitches",
+		style: "style5",
+		image: "images/little-witches-cover.png",
+		title: "Little Witches Adventure",
+		tag: "Game",
+		tech: ["Unity", "C#", "Blender", "Game"],
+		external: "https://jessica-ix.itch.io/little-witches-adventure",
+		demo: "https://www.youtube.com/watch?v=syvT-5rn6rY"
 	},
 	{
 		id: "a2go",
@@ -110,16 +112,6 @@ window.portfolioCards = [
 		title: "A2-Go!(AR)",
 		tag: "AR",
 		tech: ["Unity", "C#", "AR"]
-	},
-	{
-		id: "cooksafe",
-		style: "style3",
-		image: "images/cooksafe-overview.png",
-		title: "CookSafeVR",
-		tag: "VR",
-		tech: ["Unreal Engine 5", "Blueprints", "VR"],
-		external: "https://cihrke5.wixsite.com/eecs440team3p3",
-		demo: null
 	},
 	{
 		id: "humanshapemobile",
@@ -132,13 +124,21 @@ window.portfolioCards = [
 		demo: null
 	},
 	{
-		id: "littlewitches",
-		style: "style5",
-		image: "images/little-witches-cover.png",
-		title: "Little Witches Adventure",
-		tag: "Game",
-		tech: ["Unity", "C#", "Blender", "Game"],
-		external: "https://jessica-ix.itch.io/little-witches-adventure",
-		demo: "https://www.youtube.com/watch?v=syvT-5rn6rY"
+		id: "cooksafe",
+		style: "style3",
+		image: "images/cooksafe-overview.png",
+		title: "CookSafeVR",
+		tag: "VR",
+		tech: ["Unreal Engine 5", "Blueprints", "VR"],
+		external: "https://cihrke5.wixsite.com/eecs440team3p3",
+		demo: null
+	},
+		{
+		id: "csesim",
+		style: "style1",
+		image: "images/pic01.jpg",
+		title: "CSE Simulato(VR)",
+		tag: "VR",
+		tech: ["Unreal Engine 5", "Blueprints", "VR"]
 	}
 ];
