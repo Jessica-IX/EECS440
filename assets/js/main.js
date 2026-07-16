@@ -207,6 +207,10 @@
 					'</article>'
 				].join('');
 			}).join('');
+
+			Array.prototype.forEach.call(projectGrid.querySelectorAll('article'), function(article, index) {
+				article.style.animationDelay = (index * 90) + 'ms';
+			});
 		}
 
 		var projectRoot = document.querySelector('.project-page');
