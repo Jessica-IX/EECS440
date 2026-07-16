@@ -72,6 +72,12 @@ input, select, textarea {
 	appearance: none;
 }
 
+.title {
+	color:white;
+}
+.title:hover {
+	color: #7abbff;
+}
 /* Basic */
 
 	@-ms-viewport {
@@ -187,7 +193,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #ffffff !important;
 		}
 
 	strong, b {
@@ -3373,12 +3379,12 @@ input, select, textarea {
 	.home-page #main,
 	.home-page #header,
 	.home-page .inner {
-		background: #ffffff !important;
+		background: linear-gradient(180deg, #1b2230 0%, #111720 100%) !important;
 	}
 
 	.home-page #wrapper > *,
 	.home-page #wrapper > * > .inner {
-		background: #ffffff !important;
+		background: linear-gradient(180deg, #1b2230 0%, #111720 100%) !important;
 	}
 
 	.home-page #main {
@@ -3391,9 +3397,8 @@ input, select, textarea {
 		inset: 0;
 		pointer-events: none;
 		background:
-			radial-gradient(circle at 18% 14%, rgba(240, 201, 135, 0.12), transparent 30%),
-			radial-gradient(circle at 88% 9%, rgba(73, 101, 130, 0.09), transparent 24%),
-			linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
+			radial-gradient(circle at 20% 10%, rgba(240, 201, 135, 0.08), transparent 28%),
+			radial-gradient(circle at 86% 14%, rgba(115, 142, 184, 0.09), transparent 24%);
 		z-index: 0;
 	}
 
@@ -3417,14 +3422,14 @@ input, select, textarea {
 		line-height: 0.84;
 		letter-spacing: -0.065em;
 		text-transform: uppercase;
-		color: #000000;
+		color: #f6f7fb;
 		font-weight: 700;
 		margin-bottom: 0;
 	}
 
 	.home-page .section-rule {
 		border: 0;
-		border-top: 1px solid rgba(23, 28, 40, 0.12);
+		border-top: 1px solid rgba(255, 255, 255, 0.12);
 		margin: 2.8rem 0 1.8rem;
 	}
 
@@ -3434,7 +3439,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		font-weight: 700;
-		color: rgba(23, 28, 40, 0.6);
+		color: rgba(246, 247, 251, 0.68);
 	}
 
 	.home-page .editorial-heading {
@@ -3445,7 +3450,7 @@ input, select, textarea {
 		max-width: 40rem;
 		font-size: 1.1em;
 		line-height: 1.8;
-		color: rgba(23, 28, 40, 0.66);
+		color: rgba(246, 247, 251, 0.74);
 	}
 
 	.hero-actions,
@@ -3462,7 +3467,7 @@ input, select, textarea {
 
 	.meta {
 		font-size: 0.88em;
-		color: rgba(31, 37, 52, 0.68);
+		color: rgba(246, 247, 251, 0.68);
 	}
 
 	.hero-panel,
@@ -3521,7 +3526,7 @@ input, select, textarea {
 	.home-page .section-heading p {
 		max-width: 32rem;
 		margin-bottom: 0;
-		color: rgba(31, 37, 52, 0.72);
+		color: rgba(246, 247, 251, 0.72);
 	}
 
 	.home-page .tiles article {
@@ -3545,7 +3550,7 @@ input, select, textarea {
 		text-align: left;
 		justify-content: flex-start;
 		padding: 0;
-		color: #101319;
+		color: #eef4ff;
 		z-index: 1;
 		transition: transform 0.28s ease;
 	}
@@ -3556,7 +3561,7 @@ input, select, textarea {
 		box-shadow: 0 18px 44px rgba(18, 27, 44, 0.08);
 		position: relative;
 		aspect-ratio: 1.18 / 0.88;
-		background: #f3f1ec;
+		background: rgba(255, 255, 255, 0.04);
 	}
 
 	.home-page .tiles article > .image img {
@@ -3597,7 +3602,7 @@ input, select, textarea {
 	.home-page .card-details h2 {
 		display: block;
 		margin: 0 0 0.5rem 0;
-		color: #101319;
+		color: #f7f7fb;
 		font-size: 1.12em;
 		letter-spacing: 0;
 		text-transform: uppercase;
@@ -3619,29 +3624,29 @@ input, select, textarea {
 		min-height: 1.75rem;
 		padding: 0 0.8rem;
 		border-radius: 999px;
-		background: #f7f8fa;
-		border: 1px solid rgba(16, 19, 25, 0.07);
+		background: rgba(255, 255, 255, 0.10);
+		border: 1px solid rgba(255, 255, 255, 0.12);
 		font-size: 0.63em;
 		letter-spacing: 0.09em;
 		text-transform: uppercase;
-		color: #39414d;
-		box-shadow: 0 4px 14px rgba(18, 27, 44, 0.05);
+		color: #eef4ff;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 		transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 	}
 
 	.home-page .tiles article.style1 .card-chip {
-		background: #eaf2fa;
-		color: #20405e;
+		background: rgba(111, 168, 255, 0.18);
+		color: #dbe9ff;
 	}
 
 	.home-page .tiles article.style2 .card-chip {
-		background: #eaf5ef;
-		color: #205244;
+		background: rgba(120, 210, 181, 0.16);
+		color: #dcfff4;
 	}
 
 	.home-page .tiles article.style3 .card-chip {
-		background: #f6eee4;
-		color: #6a4d2f;
+		background: rgba(247, 186, 125, 0.18);
+		color: #fff0de;
 	}
 
 	.home-page .tiles article:hover {
@@ -3663,7 +3668,7 @@ input, select, textarea {
 
 	.home-page .tiles article:hover .card-details h2,
 	.home-page .tiles article > a.card-link:hover + .card-details h2 {
-		color: #0c1017;
+		color: #ffffff;
 		transform: translateY(-1px);
 	}
 
