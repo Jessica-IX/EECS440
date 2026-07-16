@@ -158,7 +158,7 @@
 			})
 			.append('<a class="close" href="#menu">Close</a>');
 
-		$body
+	$body
 			.on('click', 'a[href="#menu"]', function(event) {
 
 				event.stopPropagation();
@@ -181,5 +181,76 @@
 						$menu._hide();
 
 			});
+
+	// Portfolio content rendering.
+		var projectGrid = document.getElementById('project-grid');
+		if (projectGrid && window.portfolioCards) {
+			var projectCount = document.getElementById('project-count');
+			if (projectCount) {
+				projectCount.textContent = window.portfolioCards.length;
+			}
+
+			projectGrid.innerHTML = window.portfolioCards.map(function(card) {
+				var href = 'project.html?project=' + encodeURIComponent(card.id);
+				var tech = (card.tech || []).map(function(item) {
+					return '<span class="card-chip">' + item + '</span>';
+				}).join('');
+				return [
+					'<article class="' + card.style + '">',
+						'<a href="' + href + '" class="card-link">',
+							'<span class="image"><img src="' + card.image + '" alt="" /></span>',
+						'</a>',
+						'<div class="card-details">',
+							'<h2>' + card.title + '</h2>',
+							'<div class="card-meta">' + tech + '</div>',
+						'</div>',
+					'</article>'
+				].join('');
+			}).join('');
+		}
+
+		var projectRoot = document.querySelector('.project-page');
+		if (projectRoot && window.portfolioProjects) {
+			var params = new URLSearchParams(window.location.search);
+			var projectKey = params.get('project') || 'csesim';
+			var project = window.portfolioProjects[projectKey] || window.portfolioProjects.csesim;
+
+			document.title = project.title + ' | Jessica Li';
+			document.body.style.background = 'linear-gradient(180deg, #1b2230 0%, #111720 100%)';
+			document.body.style.color = '#f7f7fb';
+
+			document.getElementById('project-tag').textContent = project.tag;
+			document.getElementById('project-title').textContent = project.title;
+			var videoPanel = document.querySelector('.project-video-panel');
+			var videoFrame = document.getElementById('project-video');
+			if (project.video) {
+				videoFrame.src = project.video;
+				videoPanel.style.display = '';
+			} else {
+				videoFrame.removeAttribute('src');
+				videoPanel.style.display = 'none';
+			}
+			var playableWrap = document.getElementById('project-playable-wrap');
+			var playableLink = document.getElementById('project-playable');
+			var playableLabel = project.playableLabel || 'Playable Link';
+			if (project.playable) {
+				playableLink.href = project.playable;
+				playableLink.textContent = project.playable;
+				playableWrap.querySelector('.section-label-inline').textContent = playableLabel;
+				playableWrap.style.display = 'flex';
+			} else {
+				playableWrap.style.display = 'none';
+			}
+
+			var meta = document.getElementById('project-meta');
+			meta.innerHTML = project.meta.map(function(item) {
+				return '<span class="pill">' + item + '</span>';
+			}).join('');
+
+			var body = document.getElementById('project-body');
+			body.innerHTML = project.description.map(function(paragraph) {
+				return '<p>' + paragraph + '</p>';
+			}).join('');
+		}
 
 })(jQuery);
