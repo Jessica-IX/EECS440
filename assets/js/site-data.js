@@ -1,6 +1,6 @@
 window.portfolioProjects = {
 	csesim: {
-		title: "CSE Simulato(VR)",
+		title: "CSE Simulator",
 		summary: "A VR project built in Unreal Engine 5 with affordance-based interaction systems and production support from Blender and GitLab.",
 		video: "https://www.youtube.com/embed/MoJ4MdF63fM?start=20",
 		demo: "https://www.youtube.com/watch?v=MoJ4MdF63fM&t=20s",
@@ -18,7 +18,7 @@ window.portfolioProjects = {
 		]
 	},
 	a2go: {
-		title: "A2-Go! (AR)",
+		title: "A2-Go!",
 		summary: "An augmented reality game where players explore Ann Arbor landmarks, grow plants, and progress through a city-scale unlock loop.",
 		video: "https://www.youtube.com/embed/bjmcOX9lZWc",
 		demo: "https://www.youtube.com/watch?v=bjmcOX9lZWc",
@@ -109,7 +109,7 @@ window.portfolioCards = [
 		id: "a2go",
 		style: "style2",
 		image: "images/pic02.jpg",
-		title: "A2-Go!(AR)",
+		title: "A2-Go!",
 		tag: "AR",
 		tech: ["Unity", "C#", "AR"]
 	},
@@ -137,7 +137,7 @@ window.portfolioCards = [
 		id: "csesim",
 		style: "style1",
 		image: "images/pic01.jpg",
-		title: "CSE Simulato(VR)",
+		title: "CSE Simulator",
 		tag: "VR",
 		tech: ["Unreal Engine 5", "Blueprints", "VR"]
 	}
