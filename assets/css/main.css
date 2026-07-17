@@ -3718,6 +3718,103 @@ input, select, textarea {
 		margin-top: 1.5rem;
 	}
 
+	.project-gallery-shell {
+		margin-top: 2rem;
+		padding-top: 0.25rem;
+	}
+
+	.project-gallery {
+		overflow-x: auto;
+		overflow-y: hidden;
+		border-radius: 22px;
+		padding: 0.9rem;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+		cursor: grab;
+		user-select: none;
+		touch-action: pan-x pan-y;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.project-gallery::-webkit-scrollbar {
+		display: none;
+	}
+
+	.project-gallery.is-dragging {
+		cursor: grabbing;
+	}
+
+	.project-gallery-track {
+		display: flex;
+		align-items: stretch;
+		gap: 0.9rem;
+		width: max-content;
+	}
+
+	.project-gallery-item {
+		flex: 0 0 auto;
+		width: clamp(13rem, 42vw, 18rem);
+		aspect-ratio: 1.42 / 1;
+		overflow: hidden;
+		border-radius: 20px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+		position: relative;
+	}
+
+	.project-gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.25s ease, filter 0.25s ease;
+	}
+
+	.project-gallery-humanshapemobile .project-gallery-item {
+		width: clamp(10rem, 24vw, 14rem);
+		aspect-ratio: 0.47 / 1;
+		border-radius: 24px;
+	}
+
+	.project-gallery-a2go .project-gallery-item {
+		width: clamp(10.5rem, 26vw, 14.5rem);
+		aspect-ratio: 0.47 / 1;
+		border-radius: 24px;
+	}
+
+	.project-gallery-a2go .project-gallery-item img {
+		object-fit: cover;
+	}
+
+	.project-gallery-littlewitches .project-gallery-item {
+		width: clamp(25rem, 34vw, 30rem);
+		aspect-ratio: 16 / 9;
+	}
+
+	.project-gallery-csesim .project-gallery-item {
+		width: clamp(30rem, 35vw, 40rem);
+		aspect-ratio: 15 / 9;
+	}
+
+	.project-gallery-cooksafe .project-gallery-item {
+		width: clamp(30rem, 35vw, 40rem);
+		aspect-ratio: 15 / 9;
+	}
+
+	.project-gallery-humanshapemobile .project-gallery-item img {
+		object-fit: cover;
+		background: rgba(6, 13, 18, 0.9);
+	}
+
+	.project-gallery:hover .project-gallery-item img,
+	.project-gallery.is-dragging .project-gallery-item img {
+		transform: scale(1.02);
+		filter: saturate(1.05);
+	}
+
 	.project-panel {
 		display: flex;
 		flex-direction: column;
@@ -3884,6 +3981,10 @@ input, select, textarea {
 			padding: 2rem;
 		}
 
+		.project-gallery-shell {
+			margin-top: 1.5rem;
+		}
+
 		.home-page #main::before {
 			position: absolute;
 		}
@@ -3912,6 +4013,48 @@ input, select, textarea {
 
 		.project-shell h1 {
 			font-size: clamp(2.3rem, 12vw, 3.6rem);
+		}
+
+		.project-gallery {
+			padding: 0.75rem;
+			border-radius: 18px;
+		}
+
+		.project-gallery-track {
+			gap: 0.7rem;
+		}
+
+		.project-gallery-item {
+			width: clamp(10.5rem, 64vw, 13rem);
+			aspect-ratio: 1.35 / 1;
+			border-radius: 16px;
+		}
+
+		.project-gallery-humanshapemobile .project-gallery-item {
+			width: clamp(9rem, 48vw, 11rem);
+			aspect-ratio: 0.47 / 1;
+			border-radius: 22px;
+		}
+
+		.project-gallery-a2go .project-gallery-item {
+			width: clamp(8.5rem, 46vw, 10.75rem);
+			aspect-ratio: 0.47 / 1;
+			border-radius: 22px;
+		}
+
+		.project-gallery-littlewitches .project-gallery-item {
+			width: clamp(10rem, 58vw, 12rem);
+			aspect-ratio: 16 / 9;
+		}
+
+		.project-gallery-csesim .project-gallery-item {
+			width: clamp(10rem, 58vw, 12rem);
+			aspect-ratio: 8 / 5;
+		}
+
+		.project-gallery-cooksafe .project-gallery-item {
+			width: clamp(10rem, 58vw, 12rem);
+			aspect-ratio: 8 / 5;
 		}
 	}
 

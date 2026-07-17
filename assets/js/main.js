@@ -183,6 +183,12 @@
 			});
 
 	// Portfolio content rendering.
+		var defaultGallery = [
+			'images/pic05.jpg',
+			'images/pic06.jpg',
+			'images/pic07.jpg',
+			'images/pic08.jpg'
+		];
 		var projectGrid = document.getElementById('project-grid');
 		if (projectGrid && window.portfolioCards) {
 			var projectCount = document.getElementById('project-count');
@@ -255,6 +261,53 @@
 			body.innerHTML = project.description.map(function(paragraph) {
 				return '<p>' + paragraph + '</p>';
 			}).join('');
+
+			var galleryViewport = document.getElementById('project-gallery');
+			var galleryTrack = document.getElementById('project-gallery-track');
+			if (galleryViewport && galleryTrack) {
+				galleryViewport.className = 'project-gallery project-gallery-' + projectKey;
+				var galleryImages = (project.gallery && project.gallery.length >= 3 ? project.gallery : defaultGallery).slice();
+				var galleryMarkup = galleryImages.map(function(image, index) {
+					return [
+						'<div class="project-gallery-item">',
+							'<img src="' + image + '" alt="" loading="lazy" />',
+						'</div>'
+					].join('');
+				}).join('');
+
+				galleryTrack.innerHTML = galleryMarkup;
+
+				var dragging = false;
+				var dragStartX = 0;
+				var dragStartScroll = 0;
+
+				galleryViewport.addEventListener('pointerdown', function(event) {
+					dragging = true;
+					dragStartX = event.clientX;
+					dragStartScroll = galleryViewport.scrollLeft;
+					if (galleryViewport.setPointerCapture) {
+						galleryViewport.setPointerCapture(event.pointerId);
+					}
+					galleryViewport.classList.add('is-dragging');
+				});
+
+				galleryViewport.addEventListener('pointermove', function(event) {
+					if (!dragging) {
+						return;
+					}
+
+					galleryViewport.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+				});
+
+				function endDrag() {
+					dragging = false;
+					galleryViewport.classList.remove('is-dragging');
+				}
+
+				galleryViewport.addEventListener('pointerup', endDrag);
+				galleryViewport.addEventListener('pointercancel', endDrag);
+				galleryViewport.addEventListener('lostpointercapture', endDrag);
+			}
 		}
 
 })(jQuery);
