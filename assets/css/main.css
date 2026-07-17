@@ -3795,13 +3795,31 @@ input, select, textarea {
 	}
 
 	.project-gallery-csesim .project-gallery-item {
-		width: clamp(30rem, 35vw, 40rem);
-		aspect-ratio: 15 / 9;
+		width: clamp(18rem, 34vw, 26rem);
+		aspect-ratio: 8 / 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project-gallery-csesim .project-gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 
 	.project-gallery-cooksafe .project-gallery-item {
-		width: clamp(30rem, 35vw, 40rem);
-		aspect-ratio: 15 / 9;
+		width: clamp(18rem, 34vw, 26rem);
+		aspect-ratio: 8 / 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project-gallery-cooksafe .project-gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 
 	.project-gallery-humanshapemobile .project-gallery-item img {
@@ -4048,12 +4066,12 @@ input, select, textarea {
 		}
 
 		.project-gallery-csesim .project-gallery-item {
-			width: clamp(10rem, 58vw, 12rem);
+			width: clamp(11rem, 66vw, 14rem);
 			aspect-ratio: 8 / 5;
 		}
 
 		.project-gallery-cooksafe .project-gallery-item {
-			width: clamp(10rem, 58vw, 12rem);
+			width: clamp(11rem, 66vw, 14rem);
 			aspect-ratio: 8 / 5;
 		}
 	}

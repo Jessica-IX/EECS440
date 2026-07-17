@@ -17,12 +17,12 @@ window.portfolioProjects = {
 			"The experience was designed for VR using a Meta Quest Pro headset. I also designed and implemented an affordance-based interaction system that enables users to perform various interactions through the left-hand trigger, such as toggling light switches and fire alarms, throwing away trash, talking to NPCs, drawing on a whiteboard, and shooting at enemies."
 		],
 		gallery: [
-			"images/gallery/csesim-01.jpg",
-			"images/gallery/csesim-02.jpg",
 			"images/gallery/csesim-03.jpg",
+			"images/gallery/csesim-02.jpg",
 			"images/gallery/csesim-04.jpg",
 			"images/gallery/csesim-05.jpg",
-			"images/gallery/csesim-06.jpg"
+			"images/gallery/csesim-06.jpg",
+			"images/gallery/csesim-01.jpg"
 		]
 	},
 	a2go: {
@@ -71,11 +71,11 @@ window.portfolioProjects = {
 			"I implemented Blueprint-driven gameplay systems, including VR interactions, controller input mapping, collision-based object interactions, event sequencing, dynamic UI, and Niagara particle effects for fire and water hazards, creating responsive and immersive training scenarios."
 		],
 		gallery: [
-			"images/gallery/cooksafe-01.jpg",
-			"images/gallery/cooksafe-02.jpg",
-			"images/gallery/cooksafe-03.jpg",
-			"images/gallery/cooksafe-04.jpg",
-			"images/gallery/cooksafe-05.jpg"
+			"images/gallery/cooksafe-1.png",
+			"images/gallery/cooksafe-2.png",
+			"images/gallery/cooksafe-3.png",
+			"images/gallery/cooksafe-4.jpg",
+			"images/gallery/cooksafe-5.png"
 		]
 	},
 	humanshapemobile: {
