@@ -2883,12 +2883,9 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-	}
-
-		#header .logo {
-			display: block;
-			border-bottom: 0;
+			#header .logo {
+				display: block;
+				border-bottom: 0;
 			color: inherit;
 			font-weight: 900;
 			letter-spacing: 0.35em;
