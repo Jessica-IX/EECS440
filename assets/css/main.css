@@ -3512,6 +3512,18 @@ input, select, textarea {
 		margin-top: 1.5rem;
 	}
 
+	.home-page .tiles {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 2.5em;
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		justify-items: stretch;
+	}
+
 	.home-page .section-heading {
 		display: flex;
 		align-items: baseline;
@@ -3533,8 +3545,12 @@ input, select, textarea {
 		border: 0;
 		background: transparent;
 		position: relative;
+		width: 100%;
+		min-width: 0;
+		margin: 0;
 		max-width: none;
-		justify-self: start;
+		box-sizing: border-box;
+		justify-self: stretch;
 		animation: cardRise 0.65s ease both;
 	}
 
@@ -3550,6 +3566,33 @@ input, select, textarea {
 		color: #eef4ff;
 		z-index: 1;
 		transition: transform 0.28s ease;
+	}
+
+	.home-page .tiles article > a.card-link,
+	.home-page .tiles article .image {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+
+	.home-page .tiles article .image {
+		display: block;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 18px 44px rgba(18, 27, 44, 0.08);
+		position: relative;
+		aspect-ratio: 1.18 / 0.88;
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	.home-page .tiles article .image img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		object-fit: cover;
+		opacity: 1;
+		transition: transform 0.45s ease, filter 0.35s ease;
 	}
 
 	.home-page .tiles article > .image {
@@ -3978,18 +4021,28 @@ input, select, textarea {
 		color: rgba(0, 0, 0, 0.48);
 	}
 
-	@media screen and (max-width: 980px) {
-		.project-layout,
-		.section-heading {
-			grid-template-columns: 1fr;
-		}
+		@media screen and (max-width: 980px) {
+			.project-layout,
+			.section-heading {
+				grid-template-columns: 1fr;
+			}
 
-		.home-page .tiles article {
-			width: calc(50% - 2.5em);
-		}
+			.home-page .tiles {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 2.5em;
+				margin: 0;
+				justify-items: stretch;
+			}
 
-		.section-heading {
-			display: block;
+			.home-page .tiles article {
+				width: 100%;
+				margin: 0;
+				justify-self: stretch;
+			}
+
+			.section-heading {
+				display: block;
 		}
 
 		.project-shell {
@@ -4005,12 +4058,30 @@ input, select, textarea {
 		}
 	}
 
-	@media screen and (max-width: 736px) {
-		.home-page .tiles article {
-			width: 100%;
-		}
+		@media screen and (max-width: 736px) {
+			.home-page .tiles {
+				grid-template-columns: minmax(0, 1fr);
+				gap: 1.5em;
+				margin: 0;
+				justify-content: center;
+				justify-items: center;
+			}
 
-		.home-page .editorial-hero h1 {
+			.home-page .tiles article {
+				width: min(100%, calc(100vw - 4rem), 22rem);
+				max-width: 22rem;
+				margin: 0;
+				justify-self: center;
+			}
+
+			.home-page .tiles article > a.card-link,
+			.home-page .tiles article .image,
+			.home-page .card-details {
+				width: 100%;
+				max-width: 100%;
+			}
+
+			.home-page .editorial-hero h1 {
 			white-space: normal;
 			max-width: 11ch;
 			font-size: clamp(2.6rem, 14vw, 4.8rem);
@@ -4073,11 +4144,20 @@ input, select, textarea {
 		}
 	}
 
-	@media screen and (min-width: 981px) {
-		.home-page .tiles article {
-			width: calc(33.33333% - 2.5em);
+		@media screen and (min-width: 981px) {
+			.home-page .tiles {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 2.5em;
+				margin: 0;
+			}
+
+			.home-page .tiles article {
+				width: 100%;
+				margin: 0;
+				justify-self: stretch;
+			}
 		}
-	}
 
 		@media screen and (max-width: 736px) {
 
